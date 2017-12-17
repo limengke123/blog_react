@@ -43,6 +43,8 @@ export default class HomeBody extends React.Component {
                     <List
                         itemLayout="vertical"
                         size="large"
+                        header={<div>fuck u</div>}
+                        footer={<div>fuck u</div>}
                         pagination={pagination}
                         dataSource={this.state.item}
                         renderItem = {item=>(
@@ -60,7 +62,6 @@ export default class HomeBody extends React.Component {
                             </Item>
                         )}
                     >
-
                     </List>
                 </Col>
             </Row>
