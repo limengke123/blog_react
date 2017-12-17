@@ -38,18 +38,20 @@ export default class Header extends React.Component {
                         // selectedKeys = {[this.state.current]}
                         mode="horizontal"
                     >
-                            <div className="logo">
+                            <Link className="logo" to="/">
                                 <img  src={logo} alt="可爱的小瓜皮"/>
-                            </div>
+                            </Link>
                         <Item key="mail">
                             <Icon type="mail"/>
                             <Link to="/blog">blog</Link>
                         </Item>
                         <Item key="app">
-                            <Icon type="appstore"/>app
+                            <Icon type="appstore"/>
+                            <Link to="/">app</Link>
                         </Item>
                         <Item type="fk">
-                            <Icon type="folder"/>文件
+                            <Icon type="folder"/>
+                            <Link to="/">文件</Link>
                         </Item>
                     </Menu>
                     {/*{*/}
