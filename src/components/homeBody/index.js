@@ -4,6 +4,7 @@
 import './index.less'
 import React from 'react'
 import {Row, Col, List, Avatar, Icon} from 'antd'
+import moment from 'moment'
 import ListItem from './list'
 const {Item} = List
 export default class HomeBody extends React.Component {
@@ -37,6 +38,11 @@ export default class HomeBody extends React.Component {
                 {text}
             </span>
         );
+        const Time = ()=>(
+            <span>
+                {moment().format('l')}
+            </span>
+        )
         return (
             <Row type="flex" className="com-body">
                 <Col span={18} offset={3}>
@@ -50,7 +56,13 @@ export default class HomeBody extends React.Component {
                         renderItem = {item=>(
                             <Item
                                 key = {item.title}
-                                actions={[<IconText type="star-o" text="156" />, <IconText type="like-o" text="156" />, <IconText type="message" text="2" />]}
+                                actions={
+                                    [
+                                        <IconText type="star-o" text="156" />,
+                                        <IconText type="like-o" text="156" />,
+                                        <IconText type="message" text="2" />,
+                                        <Time/>
+                                    ]}
                                 extra={<img width={272} alt="logo" src="https://gw.alipayobjects.com/zos/rmsportal/mqaQswcyDLcXyDKnZfES.png" />}
                             >
                                 <List.Item.Meta
@@ -60,9 +72,7 @@ export default class HomeBody extends React.Component {
                                 />
                                 {item.content}
                             </Item>
-                        )}
-                    >
-                    </List>
+                        )}/>
                 </Col>
             </Row>
         )
