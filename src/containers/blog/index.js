@@ -4,12 +4,15 @@
 import React from 'react'
 import Header from '../../components/header'
 import './index.less'
+import BlogBody from '../../components/blogBody'
+import Footer from '../../components/footer'
 export default class BlogPage extends React.Component{
     render(){
         return (
             <div className="blog">
                 <Header/>
-                blogpage
+                <BlogBody/>
+                <Footer/>
             </div>
         )
     }
