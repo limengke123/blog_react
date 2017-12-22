@@ -30,7 +30,6 @@ export  default class BlogPage extends React.Component{
                     <Divider/>
                     <Info/>
                     <Divider/>
-                    blog page
                 </Col>
             </Row>
         )

@@ -9,12 +9,12 @@ export default class BlogTitle extends React.Component {
         const {title,publishTime,author} = this.props.info
         return (
             <div className="blog-title">
-                <div>
-                    <span>
+                <div className="title">
+                    <h3 >
                         {title}
-                    </span>
+                    </h3>
                 </div>
-                <Row type='flex'>
+                <Row type='flex' className="">
                     <Col>
                         {author}
                     </Col>
