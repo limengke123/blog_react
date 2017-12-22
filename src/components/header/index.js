@@ -6,11 +6,10 @@ import {Link} from 'react-router-dom'
 import './index.less'
 import {Row, Col, Menu, Icon} from 'antd'
 import logo from '../../public/img/guapi_logo.png'
-import NavBtn from './navBtn'
 const {Item} = Menu
 export default class Header extends React.Component {
-    constructor(){
-        super(...arguments);
+    constructor(arg){
+        super(arg);
         this.state = {
             nav:[{
                 title:"试验地",
@@ -29,13 +28,10 @@ export default class Header extends React.Component {
         })
     }
     render() {
-        const {nav} = this.state;
         return (
             <Row className="com-header" type="flex">
                 <Col span={18} offset={3} className="nav">
                     <Menu
-                        // onClick = {this.handlerClick}
-                        // selectedKeys = {[this.state.current]}
                         mode="horizontal"
                     >
                             <Link className="logo" to="/">
@@ -54,11 +50,6 @@ export default class Header extends React.Component {
                             <Link to="/">文件</Link>
                         </Item>
                     </Menu>
-                    {/*{*/}
-                        {/*nav.map((val,index)=>*/}
-                            {/*<NavBtn title={val.title} key={index} route={val.route}/>*/}
-                        {/*)*/}
-                    {/*}*/}
                 </Col>
             </Row>
         )

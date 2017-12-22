@@ -8,8 +8,8 @@ import moment from 'moment'
 import ListItem from './list'
 const {Item} = List
 export default class HomeBody extends React.Component {
-    constructor() {
-        super(...arguments);
+    constructor(arg) {
+        super(arg);
         this.state = {
             item: [1, 2, 3, 4, 5].map((val, index) => {
                     return {
@@ -23,7 +23,6 @@ export default class HomeBody extends React.Component {
             )
         }
     }
-
     render() {
         const pagination = {
             pageSize: 10,
